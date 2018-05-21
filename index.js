@@ -2,6 +2,7 @@
 /*jshint esversion: 6, -W117*/
 
 const minimist = require('minimist')
+const error = require('./utils/error')
 
 module.exports = () => {
     const args = minimist(process.argv.slice(2))
@@ -19,6 +20,10 @@ module.exports = () => {
     switch (cmd) {
         case 'today':
             require('./cmds/today')(args)
+            break
+
+        case 'forecast':
+            require('./cmds/forecast')(args)
             break
 
         case 'version':
