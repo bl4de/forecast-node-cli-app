@@ -2,7 +2,12 @@
     "name": "outside-cli",
     "version": "1.0.0",
     "license": "MIT",
+    "bin": {
+        "outside": "bin/outside"
+    },
     "scripts": {},
     "devDependencies": {},
-    "dependencies": {}
+    "dependencies": {
+        "minimist": "^1.2.0"
+    }
 }
