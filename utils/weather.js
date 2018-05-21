@@ -10,7 +10,7 @@ module.exports = async (location) => {
         params: {
             format: 'json',
             q: `select item from weather.forecast where woeid in
-        (select woeid from geo.places(1) where text="${location}")`,
+        (select woeid from geo.places(1) where text="${location}") and u='c'`,
         },
     })
 
